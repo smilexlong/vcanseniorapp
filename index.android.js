@@ -14,6 +14,9 @@ import {
   View
 } from 'react-native';
 
+import Entrance from './app/entrance'
+import TabView from './app/pages/TabView'
+
 class vcanseniorapp extends Component {
   render() {
     return (
@@ -52,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('vcanseniorapp', () => vcanseniorapp);
+AppRegistry.registerComponent('vcanseniorapp', () => Entrance);

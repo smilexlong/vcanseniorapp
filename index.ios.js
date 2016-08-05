@@ -4,13 +4,17 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+
+import Entrance from './app/entrance'
 
 class vcanseniorapp extends Component {
   render() {
@@ -50,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('vcanseniorapp', () => vcanseniorapp);
+AppRegistry.registerComponent('vcanseniorapp', () => Entrance);
