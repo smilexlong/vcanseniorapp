@@ -15,7 +15,6 @@ import {
 } from 'react-native';
 
 import Entrance from './app/entrance'
-import TabView from './app/pages/TabView'
 
 class vcanseniorapp extends Component {
   render() {
