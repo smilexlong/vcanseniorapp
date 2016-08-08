@@ -18,7 +18,7 @@ export function fetchSysOrgs(isRefreshing, loading, cityId, isLoadMore, page = 1
 
 	return dispatch => {
 		dispatch(fetchSysOrgList(isRefreshing, loading, isLoadMore));
-		return request(`${DSS_SYSORG_LIST}?account=${Global.userName}&cityName=${cityName}`)
+		return request(`${DSS_SYSORG_LIST}?account=${Global.account}&cityName=${cityName}`)
 			.then((sysOrgList) => {
 				dispatch(receiveSysOrgList(sysOrgList, cityId));
 			})

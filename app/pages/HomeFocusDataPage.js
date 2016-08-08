@@ -35,7 +35,7 @@ export default class HomeFocusDataPage extends Component {
 	createChildView(tag) {
 		switch (tag) {
 			case ORGSITUATION:
-				return (<OrgSituationPage/>);
+				return (<OrgSituationPage {...this.props}/>);
 				break;
 			case FOCUSDATA:
 				return (<FocusDataPage/>);
@@ -90,7 +90,7 @@ var styles = StyleSheet.create({
 		flex: 1
 	},
 	tab: {
-		height: 50,
+		height: 55,
 		backgroundColor: '#dcdcdc',
 		justifyContent: 'center',
 		alignItems: 'center'
@@ -105,11 +105,11 @@ var styles = StyleSheet.create({
 	tabIconTxtNor: {
 		color: 'white',
 		fontFamily: Platform.OS === 'ios' ? 'Georgia-Bold' : 'STKaiti ',
-		fontSize: 14
+		fontSize: 16
 	},
 	tabIconTxtFocus: {
 		color: '#9E003F',
 		fontFamily: Platform.OS === 'ios' ? 'Georgia-Bold' : 'STKaiti ',
-		fontSize: 14
+		fontSize: 16
 	},
 });

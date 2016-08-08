@@ -67,9 +67,10 @@ export default class Login extends Component {
 						OrgName: responseData.user.MemberSysOrgName
 					});
 
-					Global.userName = responseData.user.Account;
+					Global.userName = responseData.user.Name;
+					Global.account = responseData.user.Account
 					if (responseData.user.Account == 'zxl') {
-						Global.userName = 'admin'
+						Global.account = 'admin'
 					}
 
 					/* 跳转到主页面 */
@@ -104,8 +105,9 @@ export default class Login extends Component {
 					<View style={styles.box}>
 		                <View style={styles.top}>
 						< /View>
+												    <Image source={require('../../images/loginbak.jpg')} style={[styles.imgloginbak,{width:windowsWidth},{height:windowsHeight}]}/>
 						<View style={styles.body}>
-						    <Image source={require('../../images/loginbak.jpg')} style={[styles.imgloginbak,{width:windowsWidth},{height:windowsHeight-150}]}/>
+
 						    <View style={[styles.txtBorder,{marginTop:75}]}>
 						        <TextInput style={[styles.txtaccount,{width:windowsWidth-5}]} placeholder='输入帐户' onChangeText={(text)=>this.setState({username:text})} value={this.state.username}></TextInput>
 						    </View>

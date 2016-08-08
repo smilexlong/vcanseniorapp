@@ -157,7 +157,7 @@ class HomePage extends Component {
 		}
 
 		return (
-			<TouchableOpacity onPress={()=>this.orgDetail(name)}>
+			<TouchableOpacity onPress={()=>this.orgDetail(name,orgId)}>
 				<View style={styles.itemView}>
 				    <Image source={orgImgUrl} style={styles.orgImg}/>
 				    <View style={styles.orgView}>
@@ -172,8 +172,7 @@ class HomePage extends Component {
 		);
 	}
 
-	orgDetail(name) {
-		toastShort(name);
+	orgDetail(name, orgId) {
 		const {
 			navigator
 		} = this.props;
@@ -183,7 +182,8 @@ class HomePage extends Component {
 				component: HomeFocusDataPage,
 				name: 'HomeFocusDataPage',
 				passProps: {
-					orgName: name
+					orgName: name,
+					orgId: orgId
 				}
 			});
 		} else {
@@ -191,7 +191,8 @@ class HomePage extends Component {
 				component: HomeFocusDataPage,
 				name: 'HomeFocusDataPage',
 				params: {
-					orgName: name
+					orgName: name,
+					orgId: orgId
 				}
 			});
 		}

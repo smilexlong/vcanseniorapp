@@ -24,7 +24,7 @@ export default class OrgSituationPage extends Component {
 
 	renderContent(type) {
 		return (
-			<HomeRadar/>
+			<HomeRadar {...this.props}/>
 		);
 	}
 

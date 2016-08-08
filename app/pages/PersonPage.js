@@ -18,13 +18,20 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import Store from 'react-native-simple-store';
 import Login from './Login'
 import TouchableButton from '../components/TouchableButton';
+import Global from '../utils/global'
 
 export default class Person extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			userName: 'zxl'
+			userName: ''
 		};
+	}
+
+	componentDidMount() {
+		this.setState({
+			userName: Global.userName
+		});
 	}
 
 	logout(e) {

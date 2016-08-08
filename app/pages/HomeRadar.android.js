@@ -9,7 +9,8 @@ import {
 	Text,
 	View,
 	StyleSheet,
-	Dimensions
+	Dimensions,
+	WebView
 } from 'react-native';
 
 export default class HomeRadar extends Component {
@@ -18,11 +19,13 @@ export default class HomeRadar extends Component {
 	}
 
 	render() {
+		var DEFAULT_URL = 'http://dss.hongtai.org.cn/Apps/Index?orgId=' + this.props.orgId;
 		var windowsHeight = Dimensions.get('window').height;
 		return (
 			<View style={styles.containers}>		
-			    <View style={[styles.bartChartView,{height:windowsHeight-150}]}>	
-				</View>
+			    <WebView style={styles.webview_style} source={{uri: DEFAULT_URL}} startInLoadingState={true} domStorageEnabled={true} javaScriptEnabled={true}
+          >
+        </WebView>
 			</View>
 		);
 	}
@@ -32,7 +35,7 @@ var styles = StyleSheet.create({
 	containers: {
 		flex: 1
 	},
-	bartChartView: {
-		flex: 1
+	webview_style: {
+		backgroundColor: '#fcfcfc',
 	}
 });

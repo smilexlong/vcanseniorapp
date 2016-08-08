@@ -51,12 +51,12 @@ const styles = StyleSheet.create({
 	titletxt: {
 		color: '#FFFFFF',
 		fontFamily: Platform.OS === 'ios' ? 'Georgia-Bold' : 'STKaiti ',
-		fontSize: 16
+		fontSize: 20
 	},
 	tagTxt: {
 		color: '#FFFFFF',
 		fontFamily: Platform.OS === 'ios' ? 'Georgia-Bold' : 'STKaiti ',
-		fontSize: 16
+		fontSize: 20
 	},
 	userTxt: {
 		color: '#FFFFFF',

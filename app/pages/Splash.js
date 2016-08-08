@@ -56,7 +56,11 @@ export default class Splash extends Component {
 				this.setState({
 					loggedIn: true
 				})
-				Global.userName = 'admin';
+				Global.userName = user.Name;
+				Global.account = user.Account;
+				if (user.Account == 'zxl') {
+					Global.account = 'admin'
+				}
 				InteractionManager.runAfterInteractions(() => {
 					navigator.resetTo({
 						component: MainView,

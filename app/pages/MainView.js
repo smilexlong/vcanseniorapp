@@ -78,13 +78,13 @@ export default class MainView extends Component {
 		            <TabNavigator.Item selected={this.state.selectedTab==='home'} 
 		            renderIcon={()=>
 		            	<View style={styles.tabIconView}>
-		            	    <Icon name='md-home' color='white' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='md-home' color='white' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtNor}>首页</Text>
 		            	</View>
 		            } 
 		            renderSelectedIcon={()=>
 		            	<View style={styles.tabIconView}>
-		            	    <Icon name='md-home' color='#9E003F' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='md-home' color='#9E003F' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtFocus}>首页</Text>
 		            	</View>
 		            } 
@@ -94,13 +94,13 @@ export default class MainView extends Component {
 					<TabNavigator.Item selected={this.state.selectedTab==='message'} 
 					renderIcon={()=>
 						<View style={styles.tabIconView}>
-		            	    <Icon name='ios-text-outline' color='white' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='ios-text' color='white' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtNor}>消息</Text>
 		            	</View>
 					} 
 					renderSelectedIcon={()=>
 						<View style={styles.tabIconView}>
-		            	    <Icon name='ios-text-outline' color='#9E003F' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='ios-text' color='#9E003F' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtFocus}>消息</Text>
 		            	</View>
 					} 
@@ -110,13 +110,13 @@ export default class MainView extends Component {
 					<TabNavigator.Item selected={this.state.selectedTab==='application'} 
 					renderIcon={()=>
 						<View style={styles.tabIconView}>
-		            	    <Icon name='ios-apps-outline' color='white' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='ios-keypad' color='white' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtNor}>应用</Text>
 		            	</View>
 					} 
 					renderSelectedIcon={()=>
 						<View style={styles.tabIconView}>
-		            	    <Icon name='ios-apps-outline' color='#9E003F' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='ios-keypad' color='#9E003F' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtFocus}>应用</Text>
 		            	</View>
 					} 
@@ -126,13 +126,13 @@ export default class MainView extends Component {
 					<TabNavigator.Item selected={this.state.selectedTab==='person'} 
 					renderIcon={()=>
 						<View style={styles.tabIconView}>
-		            	    <Icon name='md-person' color='white' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='md-person' color='white' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtNor}>个人</Text>
 		            	</View>
 					} 
 					renderSelectedIcon={()=>
 						<View style={styles.tabIconView}>
-		            	    <Icon name='md-person' color='#9E003F' size={30} style={styles.tabIcon}/>
+		            	    <Icon name='md-person' color='#9E003F' size={35} style={styles.tabIcon}/>
                             <Text style={styles.tabIconTxtFocus}>个人</Text>
 		            	</View>
 					} 
@@ -146,26 +146,26 @@ export default class MainView extends Component {
 
 var styles = StyleSheet.create({
 	tab: {
-		height: 50,
+		height: 55,
 		backgroundColor: '#dcdcdc',
 		justifyContent: 'center',
 		alignItems: 'center'
 	},
 	tabIconView: {
-		top: 5
+		top: 0
 	},
 	tabIcon: {
-		width: 30,
-		height: 30
+		width: 35,
+		height: 35
 	},
 	tabIconTxtNor: {
 		color: 'white',
 		fontFamily: Platform.OS === 'ios' ? 'Georgia-Bold' : 'STKaiti ',
-		fontSize: 12
+		fontSize: 14
 	},
 	tabIconTxtFocus: {
 		color: '#9E003F',
 		fontFamily: Platform.OS === 'ios' ? 'Georgia-Bold' : 'STKaiti ',
-		fontSize: 12
+		fontSize: 14
 	},
 });
