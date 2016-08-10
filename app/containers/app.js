@@ -55,14 +55,14 @@ export default class App extends Component {
 		if (Platform.OS === 'ios') {
 			return (
 				<View style={styles.containers}>	
-				    <StatusBar hidden={false} backgroundColor="#3e9ce9" barStyle="default"/>		        
+				    <StatusBar hidden={false} barStyle="default"/>		        
 					<NavigatorIOS ref = "navigator" style = {styles.navigator} navigationBarHidden={true} initialRoute = {{component: Splash,title: 'Splash'}}/>
 				</View>
 			);
 		} else {
 			return (
 				<View style={styles.containers}>
-			        <StatusBar hidden={false} backgroundColor="#3e9ce9" barStyle="default"/>
+			        <StatusBar hidden={false} barStyle="default"/>
 					<Navigator ref = "navigator" style = {styles.navigator} configureScene = {this.configureScene} renderScene = {this.renderScene} initialRoute = {{component: Splash,name: 'Splash'}}/>
 				</View>
 			);

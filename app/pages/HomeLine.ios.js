@@ -9,20 +9,39 @@ import {
 	Text,
 	View,
 	StyleSheet,
-	Dimensions
+	Dimensions,
+	WebView
 } from 'react-native';
+
+import {
+	toastBy
+} from '../utils/ToastUtil';
 
 export default class HomeLine extends Component {
 	constructor(props) {
 		super(props);
 	}
 
+	onLoadStart() {
+		toastBy('正在加载中......', 300);
+	}
+
+	onError() {
+		toastBy('加载失败', 2000);
+	}
+
 	render() {
+		var DEFAULT_URL = 'http://dss.hongtai.org.cn/Apps/LineView?orgId=' + this.props.orgId + '&itemGuid=' + this.props.itemGuid;
 		var windowsHeight = Dimensions.get('window').height;
 		return (
 			<View style={styles.containers}>		
-			    <View style={[styles.bartChartView,{height:windowsHeight-150}]}>	
-				</View>
+			    <WebView style={styles.webview_style} source={{uri: DEFAULT_URL}} 
+			    onLoadStart={()=>this.onLoadStart()}
+			    onError={()=>this.onError()}
+			    startInLoadingState={true} 
+			    domStorageEnabled={true} 
+			    javaScriptEnabled={true}>
+                </WebView>
 			</View>
 		);
 	}
@@ -32,7 +51,7 @@ var styles = StyleSheet.create({
 	containers: {
 		flex: 1
 	},
-	bartChartView: {
-		flex: 1
+	webview_style: {
+		backgroundColor: '#fcfcfc',
 	}
 });

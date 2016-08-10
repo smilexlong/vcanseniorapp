@@ -13,9 +13,21 @@ import {
 	WebView
 } from 'react-native';
 
+import {
+	toastBy
+} from '../utils/ToastUtil';
+
 export default class HomeRadar extends Component {
 	constructor(props) {
 		super(props);
+	}
+
+	onLoadStart() {
+		toastBy('正在加载中......', 300);
+	}
+
+	onError() {
+		toastBy('加载失败', 2000);
 	}
 
 	render() {
@@ -23,9 +35,13 @@ export default class HomeRadar extends Component {
 		var windowsHeight = Dimensions.get('window').height;
 		return (
 			<View style={styles.containers}>		
-			    <WebView style={styles.webview_style} source={{uri: DEFAULT_URL}} startInLoadingState={true} domStorageEnabled={true} javaScriptEnabled={true}
-          >
-        </WebView>
+			    <WebView style={styles.webview_style} source={{uri: DEFAULT_URL}} 
+			    onLoadStart={()=>this.onLoadStart()}
+			    onError={()=>this.onError()}
+			    startInLoadingState={true} 
+			    domStorageEnabled={true} 
+			    javaScriptEnabled={true}>
+                </WebView>
 			</View>
 		);
 	}

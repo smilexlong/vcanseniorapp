@@ -38,7 +38,7 @@ export default class HomeFocusDataPage extends Component {
 				return (<OrgSituationPage {...this.props}/>);
 				break;
 			case FOCUSDATA:
-				return (<FocusDataPage/>);
+				return (<FocusDataPage {...this.props}/>);
 				break;
 			default:
 				return (<View><Text style={{fontSize:20}}>{tag}</Text></View>);

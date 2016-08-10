@@ -24,7 +24,7 @@ export default class FocusDataPage extends Component {
 
 	renderContent(type) {
 		return (
-			<HomeLine/>
+			<HomeLine {...this.props} itemGuid={type}/>
 		);
 	}
 

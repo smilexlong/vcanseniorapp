@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 import Entrance from './app/entrance'
+import IconList from './app/pages/IconList'
 
 class vcanseniorapp extends Component {
   render() {
